@@ -2,22 +2,22 @@ package com.github.marcosws.console.enuns;
 
 public enum BackgroundColor {
 	
-	BLACK("Esc[40m"),
-	RED("Esc[41m"),
-	GREEN("Esc[42m"),
-	YELLOW("Esc[43m"),
-	BLUE("Esc[44m"),
-	MAGENTA("Esc[45m"),
-	CYAN("Esc[46m"),
-	GRAY_LIGHT("Esc[47m"),
-	GRAY("Esc[100m"),
-	RED_LIGHT("Esc[101m"),
-	GREEN_LIGHT("Esc[102m"),
-	YELLOW_LIGHT("Esc[103m"),
-	BLUE_LIGHT("Esc[104m"),
-	MAGENTA_LIGHT("Esc[105m"),
-	CYAN_LIGHT("Esc[106m"),
-	WHITE("Esc[107m");
+	BLACK("\u001B[40m"),
+	RED("\u001B[41m"),
+	GREEN("\u001B[42m"),
+	YELLOW("\u001B[43m"),
+	BLUE("\u001B[44m"),
+	MAGENTA("\u001B[45m"),
+	CYAN("\u001B[46m"),
+	GRAY_LIGHT("\u001B[47m"),
+	GRAY("\u001B[100m"),
+	RED_LIGHT("\u001B[101m"),
+	GREEN_LIGHT("\u001B[102m"),
+	YELLOW_LIGHT("\u001B[103m"),
+	BLUE_LIGHT("\u001B[104m"),
+	MAGENTA_LIGHT("\u001B[105m"),
+	CYAN_LIGHT("\u001B[106m"),
+	WHITE("\u001B[107m");
 	
 	private String color;
 	

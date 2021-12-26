@@ -13,7 +13,7 @@ public enum ForegroundColor {
 	GRAY("\u001B[90m"),
 	RED_LIGHT("\u001B[91m"),
 	GREEN_LIGHT("\u001B[92m"),
-	YELLOW_LIGHT("Esc[93m"),
+	YELLOW_LIGHT("\u001B[93m"),
 	BLUE_LIGHT("\u001B[94m"),
 	MAGENTA_LIGHT("\u001B[95m"),
 	CYAN_LIGHT("\u001B[96m"),
