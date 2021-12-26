@@ -12,7 +12,7 @@ public enum BackgroundStyle {
 		this.style = style;
 	}
 	
-	public String getFontBackgroundStyle() {
+	public String getBackgroundStyle() {
 		return style;
 	}
 
