@@ -1,4 +1,4 @@
-package com.github.marcosws.console.enuns;
+package com.github.marcosws.console.enums;
 
 public enum ForegroundStyle {
 	
@@ -13,6 +13,10 @@ public enum ForegroundStyle {
 		this.style = style;
 	}
 	
+	/**
+	 * Method: getForegroundStyle()
+	 * @return String - {ESC}{code style}
+	 */
 	public String getForegroundStyle() {
 		return style;
 	}

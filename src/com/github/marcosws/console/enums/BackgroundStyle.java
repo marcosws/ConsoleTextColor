@@ -1,4 +1,4 @@
-package com.github.marcosws.console.enuns;
+package com.github.marcosws.console.enums;
 
 public enum BackgroundStyle {
 	
@@ -12,6 +12,10 @@ public enum BackgroundStyle {
 		this.style = style;
 	}
 	
+	/**
+	 * Method: getBackgroundStyle()
+	 * @return String - {ESC}{code style}
+	 */
 	public String getBackgroundStyle() {
 		return style;
 	}

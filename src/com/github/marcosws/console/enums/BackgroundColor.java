@@ -1,4 +1,4 @@
-package com.github.marcosws.console.enuns;
+package com.github.marcosws.console.enums;
 
 public enum BackgroundColor {
 	
@@ -25,6 +25,10 @@ public enum BackgroundColor {
 		this.color = color;
 	}
 	
+	/**
+	 * Method: getBackgroundColor()
+	 * @return String - {ESC}{code color}
+	 */
 	public String getBackgroundColor() {
 		return color;
 	}

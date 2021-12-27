@@ -1,112 +1,112 @@
 package com.github.marcosws.console;
 
 import com.github.marcosws.console.consts.Escape;
-import com.github.marcosws.console.enuns.BackgroundColor;
-import com.github.marcosws.console.enuns.BackgroundStyle;
-import com.github.marcosws.console.enuns.ForegroundColor;
-import com.github.marcosws.console.enuns.ForegroundStyle;
+import com.github.marcosws.console.enums.BackgroundColor;
+import com.github.marcosws.console.enums.BackgroundStyle;
+import com.github.marcosws.console.enums.ForegroundColor;
+import com.github.marcosws.console.enums.ForegroundStyle;
 
 
 public class ConsoleTextColor {
 
 	/**
-	 * Method: textStyle
+	 * Method: textStyle(ForegroundStyle foregroundStyle, String text)
 	 * @author Marcos - www.github.com/marcosws
-	 * @param fStyle
-	 * @param text
-	 * @return String
+	 * @param foregroundStyle - enum: ForegroundStyle 
+	 * @param text - String
+	 * @return String : {esc}{code style}{text}{reset code}
 	 */
-	public static String textStyle(ForegroundStyle fStyle, String text) {
-		return fStyle.getForegroundStyle()
+	public static String textStyle(ForegroundStyle foregroundStyle, String text) {
+		return foregroundStyle.getForegroundStyle()
 				.concat(text)
 				.concat(Escape.RESET);
 	}
 	
 	/**
-	 * Method: textColor
+	 * Method: textColor(ForegroundColor foregroundColor, String text)
 	 * @author Marcos - www.github.com/marcosws
-	 * @param fColor
-	 * @param text
-	 * @return String
+	 * @param foregroundColor - enum: ForegroundColor
+	 * @param text - String
+	 * @return String : {esc}{code color}{text}{reset code}
 	 */
-	public static String textColor(ForegroundColor fColor, String text) {
-		return fColor.getForegroundColor()
+	public static String textColor(ForegroundColor foregroundColor, String text) {
+		return foregroundColor.getForegroundColor()
 				.concat(text)
 				.concat(Escape.RESET);
 	}
 	
 	/**
-	 * Method: textColor
+	 * Method: textColor(BackgroundColor backgroundColor, String text)
 	 * @author Marcos - www.github.com/marcosws
-	 * @param bColor
+	 * @param backgroundColor - enum: BackgroundColor
 	 * @param text
-	 * @return String
+	 * @return String : {esc}{code color}{text}{reset code}
 	 */
-	public static String textColor(BackgroundColor bColor, String text) {
-		return bColor.getBackgroundColor()
+	public static String textColor(BackgroundColor backgroundColor, String text) {
+		return backgroundColor.getBackgroundColor()
 				.concat(text)
 				.concat(Escape.RESET);
 	}
 	
 	/**
-	 * Method: textColor
+	 * Method: textColor(ForegroundColor foregroundColor, ForegroundStyle foregroundStyle, String text)
 	 * @author Marcos - www.github.com/marcosws
-	 * @param fColor
-	 * @param fStyle
-	 * @param text
-	 * @return String
+	 * @param foregroundColor - enum: ForegroundColor
+	 * @param foregroundStyle - enum: ForegroundStyle
+	 * @param text - String
+	 * @return String : {esc}{code color/style}{text}{reset code}
 	 */
-	public static String textColor(ForegroundColor fColor, ForegroundStyle fStyle, String text) {
-		return concatColorsStyles(fColor.getForegroundColor(), fStyle.getForegroundStyle())
+	public static String textColor(ForegroundColor foregroundColor, ForegroundStyle foregroundStyle, String text) {
+		return concatColorsStyles(foregroundColor.getForegroundColor(), foregroundStyle.getForegroundStyle())
 				.concat(text)
 				.concat(Escape.RESET);
 	}
 	
 	/**
-	 * Method: textColor
+	 * Method: textColor(BackgroundColor backgroundColor, BackgroundStyle backgroundStyle, String text)
 	 * @author Marcos - www.github.com/marcosws
-	 * @param bColor
-	 * @param bStyle
-	 * @param text
-	 * @return String
+	 * @param backgroundColor - enum: BackgroundColor
+	 * @param backgroundStyle - enum: BackgroundStyle
+	 * @param text - String
+	 * @return String : {esc}{code color/style}{text}{reset code}
 	 */
-	public static String textColor(BackgroundColor bColor, BackgroundStyle bStyle, String text) {
-		return concatColorsStyles(bColor.getBackgroundColor(), bStyle.getBackgroundStyle())
+	public static String textColor(BackgroundColor backgroundColor, BackgroundStyle backgroundStyle, String text) {
+		return concatColorsStyles(backgroundColor.getBackgroundColor(), backgroundStyle.getBackgroundStyle())
 				.concat(text)
 				.concat(Escape.RESET);
 	}
 	
 	/**
-	 * Method: textColor
+	 * Method: textColor(ForegroundColor foregroundColor, BackgroundColor backgroundColor, String text)
 	 * @author Marcos - www.github.com/marcosws
-	 * @param fColor
-	 * @param bColor
-	 * @param text
-	 * @return String
+	 * @param foregroundColor - enum: ForegroundColor
+	 * @param backgroundColor - enum: BackgroundColor
+	 * @param text - String
+	 * @return String : {esc}{code color}{text}{reset code}
 	 */
-	public static String textColor(ForegroundColor fColor, BackgroundColor bColor, String text) {
-		return concatColorsStyles(bColor.getBackgroundColor(), fColor.getForegroundColor())
+	public static String textColor(ForegroundColor foregroundColor, BackgroundColor backgroundColor, String text) {
+		return concatColorsStyles(backgroundColor.getBackgroundColor(), foregroundColor.getForegroundColor())
 				.concat(text)
 				.concat(Escape.RESET);
 	}
 	
 	/**
-	 * Method: textColor
+	 * Method: textColor(ForegroundColor foregroundColor, BackgroundColor backgroundColor, BackgroundStyle backgroundStyle, String text)
 	 * @author Marcos - www.github.com/marcosws
-	 * @param fColor
-	 * @param bColor
-	 * @param bStyle
-	 * @param text
-	 * @return String
+	 * @param foregroundColor - enum: ForegroundColor
+	 * @param backgroundColor - enum: BackgroundColo
+	 * @param backgroundStyle - enum: BackgroundStyle
+	 * @param text - String
+	 * @return String : {esc}{code color/style}{text}{reset code}
 	 */
-	public static String textColor(ForegroundColor fColor, BackgroundColor bColor, BackgroundStyle bStyle, String text) {
-		return concatColorsStyles(bColor.getBackgroundColor(), fColor.getForegroundColor(), bStyle.getBackgroundStyle())
+	public static String textColor(ForegroundColor foregroundColor, BackgroundColor backgroundColor, BackgroundStyle backgroundStyle, String text) {
+		return concatColorsStyles(backgroundColor.getBackgroundColor(), foregroundColor.getForegroundColor(), backgroundStyle.getBackgroundStyle())
 				.concat(text)
 				.concat(Escape.RESET);
 	}
 	
 	/**
-	 * Private Method: concatColorsStyles
+	 * Private Method: concatColorsStyles(String...colorsStyles)
 	 * @author Marcos - www.github.com/marcosws
 	 * @param colorsStyles
 	 * @return String

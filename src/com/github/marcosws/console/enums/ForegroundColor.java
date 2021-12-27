@@ -1,4 +1,4 @@
-package com.github.marcosws.console.enuns;
+package com.github.marcosws.console.enums;
 
 public enum ForegroundColor {
 
@@ -25,6 +25,10 @@ public enum ForegroundColor {
 		this.color = color;
 	}
 	
+	/**
+	 * Method: getForegroundColor()
+	 * @return String - {ESC}{code color}
+	 */
 	public String getForegroundColor() {
 		return color;
 	}
