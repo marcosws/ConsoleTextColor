@@ -1,17 +1,25 @@
 package com.github.marcosws.console;
 
-import com.github.marcosws.console.consts.Escape;
+import com.github.marcosws.console.constants.Escape;
 import com.github.marcosws.console.enums.BackgroundColor;
 import com.github.marcosws.console.enums.BackgroundStyle;
 import com.github.marcosws.console.enums.ForegroundColor;
 import com.github.marcosws.console.enums.ForegroundStyle;
 
-
+/**
+ * Class: ConsoleTextColor - Format font color and style in console
+ * @author Marcos Souza - www.github.com/marcosws
+ * Data: 26/12/2021
+ * References:
+ * https://ss64.com/nt/syntax-ansi.html - How-to: Use ANSI colors in the terminal
+ * https://github.com/mlocati - https://gist.github.com/mlocati/fdabcaeb8071d5c75a2d51712db24011#file-win10colors-cmd
+ * https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
+ */
 public class ConsoleTextColor {
 
 	/**
 	 * Method: textStyle(ForegroundStyle foregroundStyle, String text)
-	 * @author Marcos - www.github.com/marcosws
+	 * @author Marcos Souza - www.github.com/marcosws
 	 * @param foregroundStyle - enum: ForegroundStyle 
 	 * @param text - String
 	 * @return String : {esc}{code style}{text}{reset code}
@@ -24,7 +32,7 @@ public class ConsoleTextColor {
 	
 	/**
 	 * Method: textColor(ForegroundColor foregroundColor, String text)
-	 * @author Marcos - www.github.com/marcosws
+	 * @author Marcos Souza - www.github.com/marcosws
 	 * @param foregroundColor - enum: ForegroundColor
 	 * @param text - String
 	 * @return String : {esc}{code color}{text}{reset code}
@@ -37,7 +45,7 @@ public class ConsoleTextColor {
 	
 	/**
 	 * Method: textColor(BackgroundColor backgroundColor, String text)
-	 * @author Marcos - www.github.com/marcosws
+	 * @author Marcos Souza - www.github.com/marcosws
 	 * @param backgroundColor - enum: BackgroundColor
 	 * @param text
 	 * @return String : {esc}{code color}{text}{reset code}
@@ -50,7 +58,7 @@ public class ConsoleTextColor {
 	
 	/**
 	 * Method: textColor(ForegroundColor foregroundColor, ForegroundStyle foregroundStyle, String text)
-	 * @author Marcos - www.github.com/marcosws
+	 * @author Marcos Souza - www.github.com/marcosws
 	 * @param foregroundColor - enum: ForegroundColor
 	 * @param foregroundStyle - enum: ForegroundStyle
 	 * @param text - String
@@ -64,7 +72,7 @@ public class ConsoleTextColor {
 	
 	/**
 	 * Method: textColor(BackgroundColor backgroundColor, BackgroundStyle backgroundStyle, String text)
-	 * @author Marcos - www.github.com/marcosws
+	 * @author Marcos Souza - www.github.com/marcosws
 	 * @param backgroundColor - enum: BackgroundColor
 	 * @param backgroundStyle - enum: BackgroundStyle
 	 * @param text - String
@@ -78,7 +86,7 @@ public class ConsoleTextColor {
 	
 	/**
 	 * Method: textColor(ForegroundColor foregroundColor, BackgroundColor backgroundColor, String text)
-	 * @author Marcos - www.github.com/marcosws
+	 * @author Marcos Souza - www.github.com/marcosws
 	 * @param foregroundColor - enum: ForegroundColor
 	 * @param backgroundColor - enum: BackgroundColor
 	 * @param text - String
@@ -92,7 +100,7 @@ public class ConsoleTextColor {
 	
 	/**
 	 * Method: textColor(ForegroundColor foregroundColor, BackgroundColor backgroundColor, BackgroundStyle backgroundStyle, String text)
-	 * @author Marcos - www.github.com/marcosws
+	 * @author Marcos Souza - www.github.com/marcosws
 	 * @param foregroundColor - enum: ForegroundColor
 	 * @param backgroundColor - enum: BackgroundColo
 	 * @param backgroundStyle - enum: BackgroundStyle
@@ -107,7 +115,7 @@ public class ConsoleTextColor {
 	
 	/**
 	 * Private Method: concatColorsStyles(String...colorsStyles)
-	 * @author Marcos - www.github.com/marcosws
+	 * @author Marcos Souza - www.github.com/marcosws
 	 * @param colorsStyles
 	 * @return String
 	 */

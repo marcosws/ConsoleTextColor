@@ -1,4 +1,4 @@
-package com.github.marcosws.console.consts;
+package com.github.marcosws.console.constants;
 
 public class Escape {
 	
